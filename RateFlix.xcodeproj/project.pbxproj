@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE2A871820AB637600512DD5 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DE2A871720AB637600512DD5 /* awsconfiguration.json */; };
 		DE85F32F20AAFC1300CFA45B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85F32E20AAFC1300CFA45B /* AppDelegate.swift */; };
 		DE85F33120AAFC1300CFA45B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85F33020AAFC1300CFA45B /* ViewController.swift */; };
 		DE85F33420AAFC1300CFA45B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE85F33220AAFC1300CFA45B /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE2A871720AB637600512DD5 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		DE85F32B20AAFC1300CFA45B /* RateFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE85F32E20AAFC1300CFA45B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE85F33020AAFC1300CFA45B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				DE85F33220AAFC1300CFA45B /* Main.storyboard */,
 				DE85F33820AAFC1400CFA45B /* Assets.xcassets */,
 				DE85F33A20AAFC1400CFA45B /* LaunchScreen.storyboard */,
+				DE2A871720AB637600512DD5 /* awsconfiguration.json */,
 				DE85F33D20AAFC1400CFA45B /* Info.plist */,
 				DE85F33520AAFC1300CFA45B /* RateFlix.xcdatamodeld */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2A871820AB637600512DD5 /* awsconfiguration.json in Resources */,
 				DE85F33C20AAFC1400CFA45B /* LaunchScreen.storyboard in Resources */,
 				DE85F33920AAFC1400CFA45B /* Assets.xcassets in Resources */,
 				DE85F33420AAFC1300CFA45B /* Main.storyboard in Resources */,
