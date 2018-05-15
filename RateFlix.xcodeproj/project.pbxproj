@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0D1A34E096FA749758A4C69 /* Pods_RateFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A467008A160B862F6630E22 /* Pods_RateFlix.framework */; };
 		DE2A871820AB637600512DD5 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DE2A871720AB637600512DD5 /* awsconfiguration.json */; };
 		DE85F32F20AAFC1300CFA45B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85F32E20AAFC1300CFA45B /* AppDelegate.swift */; };
 		DE85F33120AAFC1300CFA45B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85F33020AAFC1300CFA45B /* ViewController.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A467008A160B862F6630E22 /* Pods_RateFlix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RateFlix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		390443C3F234FA347B76FD17 /* Pods-RateFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateFlix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RateFlix/Pods-RateFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		A2829A90742B4D30D709BCB6 /* Pods-RateFlix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateFlix.release.xcconfig"; path = "Pods/Target Support Files/Pods-RateFlix/Pods-RateFlix.release.xcconfig"; sourceTree = "<group>"; };
 		DE2A871720AB637600512DD5 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		DE85F32B20AAFC1300CFA45B /* RateFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE85F32E20AAFC1300CFA45B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D1A34E096FA749758A4C69 /* Pods_RateFlix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20218C5FD768D0106D539571 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				390443C3F234FA347B76FD17 /* Pods-RateFlix.debug.xcconfig */,
+				A2829A90742B4D30D709BCB6 /* Pods-RateFlix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF81076BC37FDD5F47AF0971 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A467008A160B862F6630E22 /* Pods_RateFlix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE85F32220AAFC1300CFA45B = {
 			isa = PBXGroup;
 			children = (
 				DE85F32D20AAFC1300CFA45B /* RateFlix */,
 				DE85F32C20AAFC1300CFA45B /* Products */,
+				20218C5FD768D0106D539571 /* Pods */,
+				AF81076BC37FDD5F47AF0971 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE85F34020AAFC1400CFA45B /* Build configuration list for PBXNativeTarget "RateFlix" */;
 			buildPhases = (
+				84F025C9AFB0D3954CBCE7B4 /* [CP] Check Pods Manifest.lock */,
 				DE85F32720AAFC1300CFA45B /* Sources */,
 				DE85F32820AAFC1300CFA45B /* Frameworks */,
 				DE85F32920AAFC1300CFA45B /* Resources */,
+				2463E04C5E46F590397A518E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +162,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2463E04C5E46F590397A518E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RateFlix/Pods-RateFlix-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RateFlix/Pods-RateFlix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84F025C9AFB0D3954CBCE7B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RateFlix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE85F32720AAFC1300CFA45B /* Sources */ = {
@@ -286,6 +355,7 @@
 		};
 		DE85F34120AAFC1400CFA45B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 390443C3F234FA347B76FD17 /* Pods-RateFlix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +374,7 @@
 		};
 		DE85F34220AAFC1400CFA45B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2829A90742B4D30D709BCB6 /* Pods-RateFlix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
