@@ -13,26 +13,28 @@ import AWSAuthCore
 class ViewController: UIViewController {
     
     @IBOutlet weak var textfield: UITextField!
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textfield.text = "View Controller Loaded"
+        textfield.autocorrectionType = UITextAutocorrectionType.yes
+        
         
         // Get the AWSCredentialsProvider from the AWSMobileClient
         let credentialsProvider = AWSMobileClient.sharedInstance().getCredentialsProvider()
         
+        let idenId1 = credentialsProvider.getIdentityId()
+        
         // Get the identity Id from the AWSIdentityManager
         let identityId = AWSIdentityManager.default().identityId
+        
+        textfield.text = idenId1.result! as String
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
