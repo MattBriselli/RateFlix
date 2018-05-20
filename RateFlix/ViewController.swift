@@ -23,12 +23,8 @@ class ViewController: UIViewController {
         // Get the AWSCredentialsProvider from the AWSMobileClient
         let credentialsProvider = AWSMobileClient.sharedInstance().getCredentialsProvider()
         
-        let idenId1 = credentialsProvider.getIdentityId()
-        
         // Get the identity Id from the AWSIdentityManager
         let identityId = AWSIdentityManager.default().identityId
-        
-        textfield.text = idenId1.result! as String
         
     }
 
