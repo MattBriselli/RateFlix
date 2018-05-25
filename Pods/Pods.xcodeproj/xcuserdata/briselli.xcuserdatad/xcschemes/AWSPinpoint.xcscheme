@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A7E35FB400002E05136A5FB2A171674B"
-               BlueprintName = "Pods-RateFlix"
+               BlueprintIdentifier = "D78D152BDACDFE093F652F4D2FF74D2E"
+               BlueprintName = "AWSPinpoint"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-RateFlix.framework">
+               BuildableName = "AWSPinpoint.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
