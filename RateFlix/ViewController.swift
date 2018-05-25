@@ -9,6 +9,7 @@
 import UIKit
 import AWSMobileClient
 import AWSAuthCore
+import AWSPinpoint
 
 class ViewController: UIViewController {
     
@@ -25,6 +26,21 @@ class ViewController: UIViewController {
         
         // Get the identity Id from the AWSIdentityManager
         let identityId = AWSIdentityManager.default().identityId
+        
+    }
+    
+    func logEvent() {
+        
+        let pinpointAnalyticsClient =
+            AWSPinpoint(configuration:
+                AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: nil)).analyticsClient
+        
+        let event = pinpointAnalyticsClient.createEvent(withEventType: "EventName")
+        event.addAttribute("DemoAttributeValue1", forKey: "DemoAttribute1")
+        event.addAttribute("DemoAttributeValue2", forKey: "DemoAttribute2")
+        event.addMetric(NSNumber.init(value: arc4random() % 65535), forKey: "EventName")
+        pinpointAnalyticsClient.record(event)
+        pinpointAnalyticsClient.submitEvents()
         
     }
 
