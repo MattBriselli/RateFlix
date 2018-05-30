@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RateFlix/AppDelegate.swift"
-            timestampString = "548104007.619422"
+            timestampString = "548977947.337611"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "persistentContainer"
             landmarkType = "24">
          </BreakpointContent>
