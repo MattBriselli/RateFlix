@@ -10,6 +10,7 @@ import UIKit
 import AWSMobileClient
 import AWSAuthCore
 import AWSPinpoint
+import AWSAuthUI
 
 class ViewController: UIViewController {
     
@@ -26,6 +27,20 @@ class ViewController: UIViewController {
         
         // Get the identity Id from the AWSIdentityManager
         let identityId = AWSIdentityManager.default().identityId
+        
+        if !AWSSignInManager.sharedInstance().isLoggedIn {
+            AWSAuthUIViewController
+                .presentViewController(with: self.navigationController!,
+                                       configuration: nil,
+                                       completionHandler: { (provider: AWSSignInProvider, error: Error?) in
+                                        if error != nil {
+                                            print("Error occurred: \(String(describing: error))")
+                                        } else {
+                                            // Sign in successful.
+                                            print("Signed In")
+                                        }
+                })
+        }
         
     }
     
