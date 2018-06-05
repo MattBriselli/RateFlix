@@ -29,17 +29,16 @@ class ViewController: UIViewController {
         let identityId = AWSIdentityManager.default().identityId
         
         if !AWSSignInManager.sharedInstance().isLoggedIn {
-            AWSAuthUIViewController
-                .presentViewController(with: self.navigationController!,
-                                       configuration: nil,
-                                       completionHandler: { (provider: AWSSignInProvider, error: Error?) in
-                                        if error != nil {
-                                            print("Error occurred: \(String(describing: error))")
-                                        } else {
-                                            // Sign in successful.
-                                            print("Signed In")
-                                        }
-                })
+            AWSAuthUIViewController.presentViewController(with: self.navigationController!,
+               configuration: nil,
+               completionHandler: { (provider: AWSSignInProvider, error: Error?) in
+                if error != nil {
+                    print("Error occurred: \(String(describing: error))")
+                } else {
+                    // Sign in successful.
+                    print("Signed In")
+                }
+            })
         }
         
     }
